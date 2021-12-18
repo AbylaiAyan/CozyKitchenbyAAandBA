@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/style4.css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://img.icons8.com/fluency/50/000000/cake.png" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amita&family=Corinthia:wght@700&family=Diplomata&family=IBM+Plex+Sans:wght@200&family=Nunito+Sans:ital,wght@0,400;0,600;1,600&family=Rye&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+
+  <title>Cozy Kitchen</title>
+</head>
+<body>
+  <div class="">
+    <div class="">
+      <div class="header">
+        <div class="header__container">
+          <div class="header__tools"> <!-- будет титулка и вход и регистрация -->
+            <div class="header__tools_icon">
+              <a href="index.html"><img class="header__tools_icon-img" src="https://img.icons8.com/fluency/70/000000/cake.png"/></a>
+            </div>
+            <div class="header__tools_nav">
+              <div class="header__nav nav">  <!-- панель навигации ссылки -->
+                <div class="header__nav_list-div">
+                  <ul>
+                    <li><a href="#">Горячие блюда</a></li>
+                    <li><a href="#">Супы</a></li>
+                    <li><a href="#">Салаты</a></li>
+                    <li><a href="#">Выпечка</a></li>
+                    <li id="activeS"><a href="#">ПП</a></li>
+                    <li><a href="#">О сайте</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header__tools_sign">
+              <div class="header__tools_sign-In">
+                <a href="#">
+                  <button class="header__tools_sign-In-button buttons" id="login-btn" type="button" name="button">
+                    Login
+                  </button>
+                </a>
+              </div>
+            </div>
+              <div class="valid">
+                  <div class="login">
+                    <i class="fas fa-times" id="form-close"></i>
+                      <form name='form-login'>
+                          <h3>SIGN IN</h3>
+
+                          <label for="userName">Email</label>
+                          <input type="email" class="box" id="userName" placeholder="Username" required>
+
+                          <label for="userPw">Password</label>
+                          <input type="password" class="box" id= "userPw" placeholder="Password" required>
+
+                          <div id="remember">
+                              <input type="checkbox" value="lsRememberMe" id="rememberMe"
+                                     style="display: inline-block;">
+                              <label>Remember me</label>
+                          </div>
+
+                          <input id= "login_btn" class="valid_btn" type="submit" value="Login" onclick="check()">
+                          <p>don't have and account? <a href="indexRegister.html">register now</a></p>
+
+                      </form>
+                  </div>
+              </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="main__home">
+          <div class="main__home_text">
+            <div class="main__home_text-title">
+              Питаться правильно не только полезно, но и вкусно<img src="https://img.icons8.com/color/48/000000/healthy-food-calories-calculator.png"/>
+            </div>
+            <div class="main__home_text-p">
+              <p>В последнее время, ситуация в мире глобально изменилась. Из-за этого, здоровье
+                большинства людей ослабло. Теперь люди обращают большое внимание здоровью.</p>
+              <p>Помимо физических упражнении, питание имеет особую роль, при пути к приведению
+                и сохранению тела в здоровом виде. Поэтому не забывайте, что питаться надо
+                полноценно и разнообразно, чтобы держать фигуру в тонусе и укреплять здоровье и
+                иммунитет.</p>
+              <p>Все знают, что колбаса, сосиски, полуфабрикаты, печенье и конфеты — <span class="colorWords_span-red">вредная еда</span>.
+                Но мало кто задумывается, что ещё и очень дорогая. Готовка остальных блюда, на основе
+                приправ, соли, сахара масла также является вредной едой. На изоляции, чтобы сэкономить
+                и сделать запасы, многие закупаются полуфабрикатами, которые долго хранятся. Но все эти
+                продукты наносят сильный вред иммунитету и фигуре.</p>
+              <p>Для наших пользователей, мы создали специальный раздел чтобы они могли находить полезные
+                рецепты, на основе только <span class="colorWords_span-green">полезных и вкусных </span>продуктов.</p>
+            </div>
+          </div>
+          <div class="main__home_photos">
+            <img src="img/imgPP1.jpg" alt="img1">
+            <img src="img/imgPP2.jpg" alt="img2">
+            <img src="img/imgPP3.jpg" alt="img3">
+            <img src="img/imgPP4.jpg" alt="img4">
+          </div>
+        </div>
+        <!-- <div class="slidernew">
+          <div class="slide hi-slide">
+            <div class="hi-prev"> </div>
+            <div class="hi-next"> </div>
+            <ul>
+              <li><img src="img/img4.jpg" alt="eda4"></li>
+              <li><img src="img/img4.jpg" alt="eda4"></li>
+              <li><img src="img/img4.jpg" alt="eda4"></li>
+              <li><img src="img/img4.jpg" alt="eda4"></li>
+              <li><img src="img/img4.jpg" alt="eda4"></li>
+              <li><img src="img/img4.jpg" alt="eda4"></li>
+              <li><img src="img/img4.jpg" alt="eda4"></li>
+            </ul>
+          </div>
+        </div> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js"> </script>
+        <script src="Javascript/jquery.hislide.js"> </script>
+        <script>
+          $('.slide').hiSlide();
+        </script>
+        <div class="main__recipes">
+          <div class="main__recipes_title">
+            <div class="main__recipes_title-text">
+              Самые популярные блюда
+            </div>
+          </div>
+          <div class="main__recipes-section">
+            <div class="main__recipes-section_box1 main__recipes-section_box">
+              <h2>Lorem ipsum</h2>
+              <img class="img1" src="https://klike.net/uploads/posts/2019-06/1559545529_1.jpg" alt="">
+              <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <!-- <a href="#"><button class="main__recipes-section_box-button1" type="button" name="button">Читать дальше</button> </a> -->
+              <button id="b1" class="main__recipes-section_box-button1 main__recipes-section_box-button" type="button" name="button">Читать дальше</button>
+            </div>
+            <div class=" main__recipes-section_box">
+              <h2>Lorem ipsum</h2>
+              <img src="https://klike.net/uploads/posts/2019-06/1559545529_1.jpg" alt="">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <a href="#"><button class="main__recipes-section_box-button" type="button" name="button">Читать дальше</button> </a>
+            </div>
+            <div class="main__recipes-section_box">
+              <h2>Lorem ipsum</h2>
+              <img src="https://klike.net/uploads/posts/2019-06/1559545529_1.jpg" alt="">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <a href="#"><button class="main__recipes-section_box-button" type="button" name="button">Читать дальше</button> </a>
+            </div>
+            <div class="main__recipes-section_box">
+              <h2>Lorem ipsum</h2>
+              <img src="https://klike.net/uploads/posts/2019-06/1559545529_1.jpg" alt="">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <a href="#"><button class="main__recipes-section_box-button" type="button" name="button">Читать дальше</button> </a>
+            </div>
+            <div class="main__recipes-section_box">
+              <h2>Lorem ipsum</h2>
+              <img src="https://klike.net/uploads/posts/2019-06/1559545529_1.jpg" alt="">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <a href="#"><button class="main__recipes-section_box-button" type="button" name="button">Читать дальше</button> </a>
+            </div>
+            <div class="main__recipes-section_box">
+              <h2>Lorem ipsum</h2>
+              <img src="https://klike.net/uploads/posts/2019-06/1559545529_1.jpg" alt="">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <a href="#"><button class="main__recipes-section_box-button" type="button" name="button">Читать дальше</button> </a>
+            </div>
+          </div>
+        </div>
+        <div class="main__section_facts">
+          <div class="main__section_facts-text-img">
+            <span>Полезные Факты</span>
+            <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/44/000000/external-vegetables-healthy-food-wanicon-lineal-color-wanicon.png"/>
+          </div>
+          <div class="main__section_facts-text">
+            <h2>Продукты, которые можно употреблять без ограничения</h2>
+            <div class="main__section_facts-text-ul">
+              <ul>
+                <li>салат листовой, зелень, шпинат</li>
+                <li>чай, кофе без сахара и сливок</li>
+                <li>питьевая негазированная вода</li>
+                <li>капуста, грибы огурцы, помидоры, перец</li>
+                <li>мясо</li>
+                <li>рыба дикая</li>
+                <li>кабачки, баклажаны, свекла, морковь, стручковая фасоль</li>
+                <li>редис, редька, репка, зеленый горошек</li>
+              </ul>
+            </div>
+          </div>
+          <div class="main__section_facts-text">
+            <h2>Продукты, которые необходимо исключить или максимально ограничить</h2>
+            <div class="main__section_facts-text-ul">
+              <ul>
+                <li>масло растительное</li>
+                <li>майонез</li>
+                <li>исключить мясо, выращенное с использованием гормонов и антибиотиков, как правило это свинина и курятина</li>
+                <li>сахар, мед</li>
+                <li>консервы мясные, рыбные</li>
+                <li>пирожные, торты и другие кондитерские изделия</li>
+                <li>мороженое</li>
+                <li>газированныце и сладкие напитки</li>
+                <li>печенье, изделия из сдобного теста</li>
+                <li>конфеты, шоколад (шоколад в больших количествах)</li>
+                <li>фрукты и ягоды: бананы, виноград, финики, арбуз, дыня</li>
+                <li>варенье, джемы</li>
+                <li>копчености, колбасные изделия, сосиски, сардельки</li>
+                <li>алкогольные напитки </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main__section_facts-text">
+            <h2>Важно знать</h2>
+            <div class="main__section_facts-text-ul">
+              <ul>
+                <li>диагноз ожирение ставится при объеме талии у мужчин более 94 см, у женщин – более 80 см при любом росте. Правильно замерять на уровне пупка</li>
+                <li>для снижения веса 80% это правильное питание, 20% - физические нагрузки</li>
+                <li>физическую активность можно начинать с ходьбы 30 мин 3 раза в неделю, постепенно увеличивая периодичность и интенсивность тренировок (целевая скорость – 6км/час, ежедневно проходить 3 километра за 30 минут)хорошей интенсивностью считается. Также хорошо помогает велосипед, плавание, бег, игровые виды спорта: волейбол, футбол, баскетбол, теннис. В хорошую погоду предпочтительней заниматься на свежем воздухе, утром, пока есть силы и воздух еще сильно не загрязнен выхлопными газами</li>
+                <li>количество потребляемой жидкости – 30 мл/кг у здоровых людей, 40 мл/кг – у людей с ожирением, но не более 4 литров в сутки. Стараться пить щелочную негазированную воду, рН которой приближается к 7. Щелочное или кислое состояние воды можно определить по специальным тест-полоскам для ротовой полости, которые продаются в аптеках. Вот некоторые примеры рН воды, замеренные нами: Эльбруссия – 7,0; Аква Домбай – 6,5; Пилигримм – 4,5; родники Кавказа – 4,5; Горная Вершина – 4,5 </li>
+                <li>питание должно быть разнообразным и сбалансированным. Из белковых продуктов предпочтение отдаётся мясу красных жирных сортов (говядина, баранина), рыба (желательная дикая, не фермерская которая выращена вне воли), яйца, кисломолочные продукты. Исключить полностью быстрые углеводы (сладости, сладкие напитки, изделия из белой муки). Восполнять углеводы за счет овощей и фруктов, лучше в свежем виде</li>
+                <li>ложиться спать не позднее 22.30, продолжительность сна не менее 7-8 часов. Гормон сна мелатонин является жиросжигателем. Спать надо в хорошо проветриваемой комнате со свежим воздухом, при температуре +19 градусов</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__section_facts-text">
+
+          </div>
+          <div class="footer__section_facts-text">
+
+          </div>
+
+        </div>
+        <div class="main__partition">
+          <div class="main__partition-mailing">
+            <form id="form" class="main__partition-mailing_form">
+                <div class="main__partition-mailing_div">
+                    <p class="main__partition-mailing_p">Напишите свою электронную почту, чтобы получать самые лучшие рецепты дня</p>
+                </div>
+                <div class="main__partition-mailing_div">
+                  <input class="main__partition-mailing_input" type="text" name="email" value="example@gmail.com">
+                </div>
+                <div class="main__partition-mailing_div">
+                  <button  class="main__partition-mailing_button" type="button" name="button">Отправить </button>
+                </div>
+                <div class="main__partition-mailing-tohide">
+                  <label class="main__partition-mailing_label" for="email">Информация отправлена! Спасибо</label>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer__section"> <!-- for разные ссылки на блюда еду -->
+          <div class="footer__section_facts">
+        </div>
+        <div class="footer__links"> <!-- Ссылки на наши контакты соц сети -->
+          <div class="footer__links_socialNetwork">
+            <div class="footer__links_icons">
+                <div class="footer__links_item-icon">
+                        <a href="#">
+                          <img src="https://img.icons8.com/material/30/000000/twitter-squared.png"/>
+                        </a>
+                </div>
+                <div class="footer__links_item-icon">
+                        <a href="#">
+                          <img src="https://img.icons8.com/ios-filled/30/000000/facebook-f.png"/>
+                        </a>
+                </div>
+                <div class="footer__links_item-icon">
+                        <a href="#">
+                          <img src="https://img.icons8.com/android/30/000000/vk-com--v1.png"/>
+                        </a>
+                </div>
+                <div class="footer__links_item-icon">
+                        <a href="#">
+                          <img src="https://img.icons8.com/ios/30/000000/instagram-new--v1.png"/>
+                        </a>
+                </div>
+            </div>
+            <div class="footer__links_number">
+                <div class="footer__links_text">
+                    <p>Тел. номер: +7 777 777 77 77</p>
+                    <p>Электронный адрес: <a href="#">sozdatel@gmail.com</a></p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="Javascript/javaS4.js"></script>
+</body>
+</html>
