@@ -101,14 +101,14 @@ function check(){
     if(userName.value == storedName && userPw.value == storedPw){
         alert('You are logged in.');
     }
-    else if( userName.value === 'admin@mail.ru' && userPw.value === 'Admin007') {
-        alert("Hello admin!");
-        location.href = "indexAdmin.html"; // link to admin panel
-    }
-    else if( userName.value === 'admin2@mail.ru' && userPw.value === 'Admin008') {
-        alert("Hello admin!");
-        location.href = "indexAdminUser2.html"; // link to admin panel
-    }
+//     else if( userName.value === 'admin@mail.ru' && userPw.value === 'Admin007') {
+//         alert("Hello admin!");
+//         location.href = "indexAdmin.html"; // link to admin panel
+//     }
+//     else if( userName.value === 'admin2@mail.ru' && userPw.value === 'Admin008') {
+//         alert("Hello admin!");
+//         location.href = "indexAdminUser2.html"; // link to admin panel
+//     }
     else{
         alert('Error on login');
     }
