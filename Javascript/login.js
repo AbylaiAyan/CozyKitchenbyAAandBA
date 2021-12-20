@@ -103,11 +103,11 @@ function check(){
     }
     else if( adminName.value === 'admin@mail.ru' && adminPw.value === 'Admin007') {
         alert("Hello admin!");
-        location.href = "admin.html"; // link to admin panel
+        location.href = "indexAdmin.html"; // link to admin panel
     }
     else if( adminName.value === 'admin2@mail.ru' && adminPw.value === 'Admin008') {
         alert("Hello admin!");
-        location.href = "admin.html"; // link to admin panel
+        location.href = "indexAdminUser2.html"; // link to admin panel
     }
     else{
         alert('Error on login');
