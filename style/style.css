@@ -3,6 +3,16 @@ body {
   padding: 0;
 }
 
+.map{
+  margin-top: 100px;
+  width:1200px;
+  height:550px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #8a817c;
+  margin-bottom: 50px;
+}
+
 .valid{
   position: fixed;
   top:-120%; left: 0;
@@ -13,7 +23,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-   box-shadow:
+transition: all 0.3s
 }
 
 .valid.active{
@@ -100,6 +110,46 @@ body {
   cursor: pointer;
 }
 
+.animation{
+  position: relative;
+  transform: translate(0px, 180px);
+  opacity: 0;
+  transition: all 0.7s;
+}
+.animation.active{
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+
+.main__recipes-section.animation:nth-child(1){
+  transition: all 0.7s ease 0s;
+}
+.main__recipes-section.animation:nth-child(2){
+  transition: all 0.7s ease 0s;
+}
+.main__recipes-section.animation:nth-child(3){
+  transition: all 0.7s ease 0s;
+}
+.main__recipes-section.animation:nth-child(4){
+  transition: all 0.7s ease 0.3s;
+}
+.main__recipes-section.animation:nth-child(5){
+  transition: all 0.7s ease 0.3s;
+}
+.main__recipes-section.animation:nth-child(6){
+  transition: all 0.7s ease 0.3s;
+}
+
+
+
+.main__recipes-section_box.animation{
+  transition: all 0.7s ease 0s;
+  transform: scale(0);
+}
+.main__recipes-section_box.animation.active{
+  transform: scale(1);
+}
 
 /*=============== header ===============*/
 .header__container {
@@ -121,10 +171,6 @@ body {
 .header__tools_icon > a {
   text-decoration: none;
   color: #FF8C00;
-}
-
-.header__tools_icon-img {
-  /* margin-top: 3px; */
 }
 
 .header__tools_sign {
@@ -152,6 +198,33 @@ body {
   /* box-shadow: 0px 0px 3px black; */
 }
 
+/* ================ log out ======================= */
+
+
+.header__arrow {
+  display: none;
+}
+
+.header__tools_sign {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.header__tools_goOut {
+  display: none;
+}
+.header__arrow_downOrup > button {
+  background-color: #FFF;
+  border: 0;
+}
+
+#downOrUp {
+  transition: 0.3s;
+}
+
 
 /*=============== nav ===============*/
 
@@ -175,7 +248,7 @@ body {
 
 .header__nav_list-div > ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   list-style: none;
   font-size: 17px;
   margin: 0;
@@ -185,6 +258,8 @@ body {
 .header__nav_list-div > ul > li {
   line-height: 1.5;
   padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: center;
   text-align: center;
   align-items: center;
   position: relative;
@@ -240,19 +315,20 @@ body {
   padding: 80px 10% 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* background-image: image(); */
+  background-image: url(img/photoheaderunder.jpg);
   background-image: url("https://kartinkin.net/uploads/posts/2021-04/thumbs/1617317487_1-p-fon-dlya-prezentatsii-kulinariya-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .main__home_text {
-  font-family: 'IBM Plex Sans', sans-serif;
+  /* font-family: 'Indie Flower', cursive; */
   font-family: 'Nunito Sans', sans-serif;
 }
 
 .main__home_text-title {
-  font-size: 43px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 49px;
 }
 
 .main__home_text-p {
@@ -371,10 +447,9 @@ border: 0;
   padding: 50px 10% 20px;
   /* background-image:url("https://cs10.pikabu.ru/post_img/big/2018/08/18/7/1534590614195235309.png"); */
   /* background-image: url("http://static-cdn4.vigbo.tech/u36944/49011/blog/3881024/4527444/preview/1000-crop--cf87300f633182be424b56fc9c18d1de.jpg?v=2"); */
-  background-size: contain;
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* background-color: #DCDCDC	; */
+  background-size: cover;
+  background-image: url(img/foon.jpg);
+
   background-image: url("https://instapik.ru/wp-content/uploads/2020/08/white-background-1.jpg");
 }
 
@@ -442,61 +517,6 @@ border: 0;
 }
 
 
-/* =========== from user Recipes ================== */
-
-/* .main__userZone {
-  padding: 20px 10%;
-}
-
-.main__userZone-recipes {
-  font-family: sans-serif;
-}
-
-.main__userZone-recipes-fromUser {
-  margin-bottom: 50px;
-}
-
-.main__userZone-recipes-fromUser-text-paragh {
-  margin-left: 10px;
-}
-
-.main__userZone-recipes-userName {
-  margin: 10px 0 0 0;
-  font-family: 'Comfortaa', cursive;
-  font-size: 26px;
-  font-family:sans-serif;
-}
-
-.main__userZone-recipes-fromUser-text-paragh >h2 {
-  font-family: 'Comfortaa', cursive;
-}
-
-.main__userZone-recipes_h1 {
-  font-size: 32px;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  font-family: 'Comfortaa', cursive;
-}
-
-.main__userZone-recipes-fromUser-text {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  margin-bottom: 25px;
-  padding: 10px 10px;
-  border-radius: 10px;
-  border: 1px solid black;
-  background-color: #F9F9FF		;
-  text-align: justify;
-}
-
-.main__userZone-recipes-fromUser-text_img {
-  margin-left: 10px;
-  margin-top: 110px;
-  width:95%;
-  border: 1px solid;
-} */
-
 
 
 /* =========== mailing ================== */
@@ -552,12 +572,6 @@ border: 0;
 
 
 
-
-
-
-
-
-
 /*=============== footer ===============*/
 .footer__links {
   background-color: #323030;
@@ -567,7 +581,7 @@ border: 0;
 .footer__links_socialNetwork {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30%;
+  grid-gap: 40%;
 }
 
 .footer__links_icons {
@@ -591,4 +605,356 @@ border: 0;
 
 .footer__links_text > p > a {
   color: #fff;
+}
+
+
+@media (max-width:1455px) {
+      .main__slider {
+        height: 600px;
+        width: 70%;
+      }
+    }
+
+@media (max-width:1242px) {
+      .main__slider {
+        height: 500px;
+        width: 65%;
+      }
+    }
+
+@media (max-width:1200px) {
+      .main__slider {
+        width: 65%;
+        height: 450px;
+        transition: 1s;
+      }
+
+      /*=============== main ================ */
+      .main__home {
+        padding: 80px 10% 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-image: url(img/photoheaderunder.jpg);
+        background-image: url("https://kartinkin.net/uploads/posts/2021-04/thumbs/1617317487_1-p-fon-dlya-prezentatsii-kulinariya-1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .main__home_text-title {
+        font-size: 40px;
+      }
+
+      .main__home_text-p {
+        font-size: 23px;
+      }
+    }
+
+@media (max-width:1100px) {
+      .main__slider {
+        height: 425px;
+        width: 65%;
+        transition: 1s;
+      }
+
+      .footer__links_socialNetwork {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30%;
+      }
+    }
+
+@media (max-width:992px) {
+      .main__home {
+        padding: 80px 10% 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-image: url(img/photoheaderunder.jpg);
+        background-image: url("https://kartinkin.net/uploads/posts/2021-04/thumbs/1617317487_1-p-fon-dlya-prezentatsii-kulinariya-1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .main__home_text-title {
+        font-size: 37px;
+      }
+
+      .main__home_text-p {
+        font-size: 20px;
+      }
+
+      .footer__links_socialNetwork {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20%;
+      }
+
+      .header__tools {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .header__arrow {
+        display: block;
+        text-align: right;
+      }
+
+      .header__tools_sign {
+        position: relative;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+        margin-bottom: 10px;
+        /* border-left:1px solid #666666;
+        border-right:1px solid #666666;
+        border-bottom:1px solid #666666; */
+      }
+
+      .header__tools_goOut {
+        position: relative;
+        display: none;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+        margin-bottom: 10px;
+        /* border-left:1px solid #666666;
+        border-right:1px solid #666666;
+        border-bottom:1px solid #666666; */
+      }
+
+      .header__tools_goOut:hover, .header__tools_sign:hover {
+        background-color: #DCDCDC	;
+      }
+    /* ============================================= */
+      .nav {
+        padding: 0 0;
+      }
+
+      .header__tools_nav {
+        display: none;
+        margin: 10px 0 0 0;
+        padding: 0;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        /* border-top:1px solid #666666;
+        border-left:1px solid #666666;
+        border-right:1px solid #666666; */
+      }
+
+      .header__nav_list-div > ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px;
+        font-size: 17px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .header__nav_list-div > ul > li {
+        padding: 0px auto 0px auto;
+      }
+
+      .header__nav_list-div > ul > li:hover {
+        background-color: #DCDCDC	;
+      }
+
+      .header__tools_sign::before, .header__tools_goOut::before {
+        position: absolute;
+        content: "";
+        border-top: 1px solid black;
+        width: 50px;
+        height: 2px;
+        background-color: black;
+        top: 0;
+        left: 0;
+        transition: 1s;
+        opacity: 0;
+      }
+
+      .header__tools_sign::after, .header__tools_goOut::after{
+        position: absolute;
+        content: "";
+        border-bottom: 1px solid black;
+        right: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background-color: black;
+        transition: 1s;
+        opacity: 0;
+      }
+
+      .header__tools_sign:hover:after, .header__tools_goOut:hover:after {
+        right:50%;
+        opacity: 1;
+      }
+
+      .header__tools_sign:hover:before, .header__tools_goOut:hover:before {
+        left: 50%;
+        opacity: 1;
+      }
+
+      .buttons {
+        font-size: 17.5px;
+        font-weight: 500;
+        width: 80px;
+        height: 40px;
+        margin-left: 5px;
+        border: 2px solid #FFF;
+        border-radius: 5px;
+        background-color: #FFF;
+      }
+
+      .buttons:hover {
+        border: 0;
+        background-color: #DCDCDC	;
+      }
+
+    }
+
+
+
+@media (max-width:950px) {
+      .main__slider {
+        height: 400px;
+        width: 70%;
+        transition: 1s;
+      }
+    }
+
+@media (max-width:850px) {
+      .main__slider {
+        height: 400px;
+        width: 80%;
+        transition: 1s;
+      }
+
+      .main__home {
+        padding: 30px 10% 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-image: url(img/photoheaderunder.jpg);
+        background-image: url("https://kartinkin.net/uploads/posts/2021-04/thumbs/1617317487_1-p-fon-dlya-prezentatsii-kulinariya-1.jpg");
+        /* background-size: contain; */
+        background-repeat: no-repeat;
+      }
+
+      .main__home_text-title {
+        font-size: 35px;
+      }
+
+      .main__home_text-p {
+        font-size: 19px;
+      }
+
+      .footer__links_socialNetwork {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 13%;
+      }
+    }
+
+@media (max-width:768px) {
+      .main__home {
+        padding: 50px 10% 40px;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        background-image: url(img/photoheaderunder.jpg);
+        background-image: url("https://kartinkin.net/uploads/posts/2021-04/thumbs/1617317487_1-p-fon-dlya-prezentatsii-kulinariya-1.jpg");
+        background-size:  cover;
+        background-repeat: no-repeat;
+      }
+
+      .main__home_text-title {
+        font-size: 33px;
+      }
+
+      .main__home_text-p {
+        font-size: 18px;
+        /* margin-bottom: 40px; */
+      }
+
+      .footer__links_socialNetwork {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 6%;
+      }
+}
+
+@media (max-width:750px) {
+      .main__slider {
+        width: 80%;
+        height: 350px;
+        transition: 1s;
+      }
+}
+
+@media (max-width:700px) {
+      .main__slider {
+        width: 90%;
+        height: 300px;
+      }
+
+      .main__home {
+        padding: 50px 10% 40px;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        background-image: url(img/photoheaderunder.jpg);
+        background-image: url("https://kartinkin.net/uploads/posts/2021-04/thumbs/1617317487_1-p-fon-dlya-prezentatsii-kulinariya-1.jpg");
+        background-size:  cover;
+        background-repeat: no-repeat;
+      }
+
+      .main__home_text-title {
+        font-size: 31px;
+      }
+
+      .main__home_text-p {
+        font-size: 16px;
+        /* margin-bottom: 40px; */
+      }
+
+      .footer__links_socialNetwork {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        grid-gap: 5%;
+      }
+}
+
+
+@media (max-width:576px) {
+      .main__home {
+        padding: 30px 10% 30px;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        background-image: url(img/photoheaderunder.jpg);
+        background-image: url("https://kartinkin.net/uploads/posts/2021-04/thumbs/1617317487_1-p-fon-dlya-prezentatsii-kulinariya-1.jpg");
+        /* background-size:  cover; */
+        background-repeat: no-repeat;
+      }
+
+      .main__home_text-title {
+        font-size: 27px;
+      }
+
+      .main__home_text-p {
+        font-size: 14px;
+        /* margin-bottom: 40px; */
+      }
+
+      .footer__links {
+        background-color: #323030;
+        padding: 20px 20%;
+      }
+
+      .footer__links_socialNetwork {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1%;
+      }
+
+      .footer__links_text {
+        margin-left: 20px;
+        /* text-align:center; */
+      }
+
 }
